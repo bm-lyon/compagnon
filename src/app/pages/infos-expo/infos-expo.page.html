@@ -1,0 +1,68 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+     </ion-buttons>
+    <ion-title >
+      A propos de l'exposition
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class='fond-page' >
+
+  <div class="padding">
+
+    <ion-card *ngIf="expo.urlweb">
+      <ion-item>
+          <ion-icon name="eye" slot="start"></ion-icon>
+          <ion-label>En savoir plus</ion-label>
+      </ion-item>
+
+      <ion-card-content>
+        <div class='site-info'>
+            <p>La Bibliothèque municipale de Lyon propose un site internet dédié à l'exposition {{expo.title1}} </p>
+            <a target="blank" href='{{expo.urlweb}}'><ion-button>Voir le site d'exposition</ion-button></a>
+          </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-item>
+          <ion-icon name="information-circle" slot="start"></ion-icon>
+          <ion-label>Informations pratiques</ion-label>
+        </ion-item>
+      
+        <ion-card-content>
+            <div class='titres-info'>
+              <span class='title-second' *ngIf="expo.title1">{{ expo.title1 }}</span><br />
+              <span class='title-third' *ngIf="expo.title2">{{ expo.title2 }}</span><br />
+            </div>
+
+            <div class='dates-info'>
+              <span *ngIf="expo.start">
+              <strong>du {{expo.start | date: "dd/MM/yyyy" }} au {{expo.end | date: "dd/MM/yyyy" }}</strong><br>
+              </span>
+              <span *ngIf="expo.place">
+              <strong>{{ expo.place }}</strong>
+              </span>
+            </div>
+            
+            <div class='description-infos'>
+              {{expo.description}}
+            </div>
+
+            <div class='image-infos'>
+                <img src="{{ expo.imageUrl }}" alt="Affiche de l'exposition">
+            </div>
+
+            
+        </ion-card-content>
+      </ion-card>
+
+
+    
+  </div>
+
+</ion-content>

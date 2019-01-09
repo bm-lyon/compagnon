@@ -1,0 +1,11 @@
+
+  <ion-item>
+      <a routerLink="/about" routerLinkActive="active" (click)="close()"> A propos de l'application</a>
+  </ion-item>
+  <ion-item>
+   <a href='https://www.bm-lyon.fr' (click)="close()" >Visiter le site de la BML</a>
+  </ion-item>
+  <ion-item>
+    <a [routerLink]="['/contact']" routerLinkActive="active" (click)="close()" >Contacter la BML</a>
+  </ion-item>
+

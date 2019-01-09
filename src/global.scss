@@ -1,11 +1,81 @@
 // http://ionicframework.com/docs/theming/
-@import '~@ionic/angular/css/core.css';
-@import '~@ionic/angular/css/normalize.css';
-@import '~@ionic/angular/css/structure.css';
-@import '~@ionic/angular/css/typography.css';
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
 
-@import '~@ionic/angular/css/padding.css';
-@import '~@ionic/angular/css/float-elements.css';
-@import '~@ionic/angular/css/text-alignment.css';
-@import '~@ionic/angular/css/text-transformation.css';
-@import '~@ionic/angular/css/flex-utils.css';
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+ion-toolbar{
+    background-color:var(--ion-color-primary);
+    color:var(--ion-color-primary-contrast);
+}
+
+body{
+    background-color:var(--bckPageLight);
+}
+
+
+ion-card{
+    background-color:var(--ion-color-light);
+}
+
+.center{
+    text-align:center;
+  }
+  
+  ion-slides{
+    height:auto;
+  }
+
+  .full-width{
+    width:100%;
+  }
+  
+  .title-principal{
+    color:var(--titleColor);
+    background:var(--bckTitleSec);
+    padding:5px;
+    padding-left:15px;
+    padding-right:5px;
+    margin:0;
+  }
+  
+  .big-text{
+    font-size: 1.5em;
+  }
+  
+  
+  ion-icon{
+    margin-right:4px;
+    margin-left:4px;
+  }
+  
+  .title-second{
+    color:var(--ion-color-primary);
+    font-weight:bold;
+    font-size:1.3em;
+  }
+  
+  .title-third{
+    font-weight:bold;
+  }
+
+  .title-list{
+    color:var(--ion-color-primary);
+    font-weight:bold !important;
+    font-size:1.3em !important;
+  }
+
+
+  .fit-thumbnail { object-fit: cover; }
+  
+  .logo{
+    height:30px;
+    width:auto;
+    float:left;
+  }

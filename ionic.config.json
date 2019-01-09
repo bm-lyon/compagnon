@@ -1,6 +1,8 @@
 {
   "name": "compagnonbml",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "ae49bb36"
 }

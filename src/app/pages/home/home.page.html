@@ -1,0 +1,56 @@
+<ion-header >
+  <ion-toolbar color="primary">
+
+    <img slot="secondary" class='logo 'src="assets/imgs/logo.png">
+    
+    <ion-buttons slot="primary">
+      <ion-button icon-only (click)="presentPopover($event)">
+      <ion-icon name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title >
+        Visites des expos de la BML
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="bckPageLight">
+  <p class='title-principal big-text '>En ce moment à la BML</p>
+  <ion-row >
+    <ion-col *ngFor="let expo of exposNow">
+      <ion-item  href='/expo/{{expo.slug}}' color="none" lines="none">
+        <ion-card color="light" >
+            <ion-card-content>
+              <img src="{{ expo.imageUrl }}">
+              <ion-card-title class='home-title'>
+                <span class='title-second'>{{ expo.title1 }}</span>
+              </ion-card-title>
+              <p>
+                <span class='title-third' *ngIf="expo.title2">{{ expo.title2 }}</span><br />
+                <span class='home-date'>du {{expo.start | date: "dd/MM/yyyy" }} au {{expo.end | date: "dd/MM/yyyy" }}<br>{{expo.place}}</span>
+              </p>
+            </ion-card-content>
+        </ion-card>
+      </ion-item>
+      
+    </ion-col>
+  </ion-row>
+
+
+
+  <p *ngIf="exposOld.length>0" class='title-principal big-text'>Expositions passées</p>
+
+  <ion-list *ngIf="exposOld.length>0">
+      <ion-item *ngFor="let expo of exposOld" href='/expo/{{expo.slug}}' color="bckPageDark" >
+        <ion-thumbnail item-start >
+          <img class='fit-thumbnail 'src="{{ expo.imageUrl }}">
+        </ion-thumbnail>
+        <ion-label>
+          <h2 class='title-list'>{{ expo.title1 }}</h2>
+          <p><span class='title-third'>{{ expo.title2 }}</span><br>
+          <span class='home-date'>du {{expo.start | date: "dd/MM/yyyy" }} au {{expo.end | date: "dd/MM/yyyy" }}</span></p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+</ion-content>

@@ -3,7 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+  { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' },
+  { path: 'about', loadChildren: './pages/about/about.module#AboutPageModule' },
+  { path: 'expo/:slug', loadChildren: './pages/view-expo/view-expo.module#ViewExpoPageModule' },
+  { path: 'contact', loadChildren: './pages/contact/contact.module#ContactPageModule' },
+  { path: 'expo/:slug/about', loadChildren: './pages/infos-expo/infos-expo.module#InfosExpoPageModule' },
 ];
 
 @NgModule({

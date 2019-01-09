@@ -1,0 +1,130 @@
+<ion-header >
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+
+
+      <ion-title *ngIf="expo">
+          {{ expo.title1 }}
+      </ion-title>
+  
+      <ion-buttons slot="primary" *ngIf="expo">
+        <ion-button icon-only (click)='getInfosExpo(expo)'>
+            <ion-icon name="information-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content #pageTop class='fond-page' >
+
+    <ion-slides #slider (ionSlideDidChange)="slideChanged()" class='pageTop'>
+      <ion-slide *ngFor="let page of pages" >
+          
+        <div class='full-width'>
+            <p class='title-principal big-text full-width'>
+
+              
+             {{page.title}}</p> 
+              
+          <ion-card class='player-exposition'>
+            <ion-card-content>
+
+              <div class='repereExpo' *ngIf="page.road">
+                  <svg
+                      xmlns:dc="http://purl.org/dc/elements/1.1/"
+                      xmlns:cc="http://creativecommons.org/ns#"
+                      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                      xmlns:svg="http://www.w3.org/2000/svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                      xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                      height="70"
+                      version="1.1"
+                      viewBox="0 0 70 70"
+                      width="70"
+                      id="svg3797"
+                      sodipodi:docname="casque.svg"
+                      inkscape:version="0.92.2 2405546, 2018-03-11">
+                      <metadata
+                        id="metadata3801">
+  
+                      </metadata>
+                      
+                      <desc
+                        id="desc3789" />
+                      <defs
+                        id="defs3791" />
+                      <g
+                        id="miu"
+                        style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
+                        transform="matrix(3.1171032,0,0,3.1595214,-2.4221881,-3.3938184)">
+                        <g
+                          id="Artboard-1"
+                          transform="translate(-395,-587)">
+                          <g
+                            id="slice"
+                            transform="translate(215,119)" />
+                          <path
+                            d="m 400.00366,597.30303 c 0,0 -0.33699,-6.18283 6.99634,-6.18283 7.33333,0 7.01636,6.18283 7.01636,6.18283 v 8.48485 c 0,0 0.15823,1.21212 1.99156,1.21212 1.83333,0 1.99208,-1.21212 1.99208,-1.21212 v -3.76873 c 0,0 0,-1.08666 -1.99208,-1.08666 -0.55833,0 -1.00792,0.17322 -1.00792,0.17322 v -3.80105 c 0,0 0.0293,-7.30466 -8,-7.30466 -8.0293,0 -8,7.30466 -8,7.30466 v 3.83316 c 0,0 -0.49567,-0.17322 -0.97443,-0.17322 C 396,600.9646 396,602.01915 396,602.01915 v 3.76873 c 0,0 0.27669,1.21212 2.02557,1.21212 1.74889,0 1.97809,-1.21212 1.97809,-1.21212 z M 401.5,601 c -0.5,0 -0.5,0.54545 -0.5,0.54545 v 4.9091 c 0,0 0,0.54545 0.5,0.54545 0.5,0 0.5,-0.54545 0.5,-0.54545 v -4.9091 c 0,0 0,-0.54545 -0.5,-0.54545 z m 11,0 c -0.5,0 -0.5,0.54545 -0.5,0.54545 v 4.9091 c 0,0 0,0.54545 0.5,0.54545 0.5,0 0.5,-0.54545 0.5,-0.54545 v -4.9091 c 0,0 0,-0.54545 -0.5,-0.54545 z"
+                            id="device-headphone-music-mp3-glyph"
+                            inkscape:connector-curvature="0"
+                            style="fill:#000000" />
+                        </g>
+                      </g>
+                      <text
+                        xml:space="preserve"
+                        style="font-style:normal;font-weight:normal;font-size:86.23456573px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.15586329"
+                        x="36.327782"
+                        y="38.30389"
+                        id="text3805"
+                        transform="scale(0.96499789,1.0362717)"><tspan
+                          sodipodi:role="line"
+                          id="tspan3803"
+                          x="36.327782"
+                          y="38.30389"
+                          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:28.7448597px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;stroke-width:2.15586329">{{ page.road }}</tspan></text>
+                    </svg>
+                    <p class='texteRepere'>Aller au repère {{ page.road }}</p>
+            </div>
+
+            <p class='ecouterPresentation' *ngIf="page.mp3">Écouter la présentation <span *ngIf="duration"> ({{ duration }})</span></p>
+              <div class="player-speech player-expo" *ngIf="page.mp3">
+                <ion-button (click)="play()" *ngIf="sound == 'play'"><ion-icon name='play'></ion-icon> lecture</ion-button>
+                <ion-button (click)="stop()" *ngIf="sound == 'stop'"><ion-icon name='pause'></ion-icon> pause</ion-button>
+                <span *ngIf="loaderSound"><ion-spinner name="lines-small"></ion-spinner> chargement ...</span>
+              </div>
+              <div class="player-speech navigation-expo">
+                <ion-button (click)="prevRoom()" fill="outline" *ngIf="prevStep == true"><ion-icon name='arrow-back'></ion-icon> <ion-icon name='walk'></ion-icon>  Précédent</ion-button>
+                <ion-button (click)="nextRoom()" fill="outline" *ngIf="nextStep == true"> Suivant <ion-icon name='walk'></ion-icon> <ion-icon name='arrow-forward'></ion-icon></ion-button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+  
+  
+          <div class="image-presentation" *ngIf="page.image">
+              <img  class='content-image' src='{{page.image}}' class='center' />
+          </div>
+  
+          <ion-grid>
+            <ion-row align-items-center>
+              <ion-col   size-md='10' offset-md='1' >
+                <div class='content-text padding' [innerHTML]='page.description'></div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          
+
+        </div>
+  
+      </ion-slide>
+    </ion-slides>
+  
+  </ion-content>
+  
+  <ion-footer *ngIf="currentIndex">
+    <ion-toolbar color="bckdTitlePrinc">
+      <ion-title  class='center'>{{currentIndex}}/{{ totalPages }}</ion-title>
+    </ion-toolbar>
+  </ion-footer>
