@@ -91,13 +91,13 @@
 
             <p class='ecouterPresentation' *ngIf="page.mp3">Écouter la présentation <span *ngIf="duration"> ({{ duration }})</span></p>
               <div class="player-speech player-expo" *ngIf="page.mp3">
-                <ion-button (click)="play()" *ngIf="sound == 'play'"><ion-icon name='play'></ion-icon> lecture</ion-button>
+                <ion-button (click)="play()" *ngIf="sound == 'play'"><ion-icon name='play-circle'></ion-icon> lecture</ion-button>
                 <ion-button (click)="stop()" *ngIf="sound == 'stop'"><ion-icon name='pause'></ion-icon> pause</ion-button>
                 <span *ngIf="loaderSound"><ion-spinner name="lines-small"></ion-spinner> chargement ...</span>
               </div>
               <div class="player-speech navigation-expo">
-                <ion-button (click)="prevRoom()" fill="outline" *ngIf="prevStep == true"><ion-icon name='arrow-back'></ion-icon> <ion-icon name='walk'></ion-icon>  Précédent</ion-button>
-                <ion-button (click)="nextRoom()" fill="outline" *ngIf="nextStep == true"> Suivant <ion-icon name='walk'></ion-icon> <ion-icon name='arrow-forward'></ion-icon></ion-button>
+                <ion-button (click)="prevRoom()" fill="outline" *ngIf="prevStep == true"><ion-icon name='arrow-round-back'></ion-icon>  Précédent</ion-button>
+                <ion-button (click)="nextRoom()" fill="outline" *ngIf="nextStep == true"> Suivant <ion-icon name='arrow-round-forward'></ion-icon></ion-button>
               </div>
             </ion-card-content>
           </ion-card>

@@ -24,13 +24,14 @@ export class HomePage implements OnInit {
       private router:Router,
       public loadingController: LoadingController
     ) {  
-              
+
      }
   
     ionViewDidLoad() {
       
     }
-  
+    
+
   
     goToExpo(expo){
       this.router.navigateByUrl("/expo/"+expo.slug);

@@ -55,6 +55,7 @@ ion-card{
     margin-left:4px;
   }
   
+  
   .title-second{
     color:var(--ion-color-primary);
     font-weight:bold;
@@ -78,4 +79,9 @@ ion-card{
     height:30px;
     width:auto;
     float:left;
+    margin-right:1em;
+  }
+
+  .dots{
+    font-weight:bold;
   }

@@ -1,16 +1,14 @@
 <ion-header >
   <ion-toolbar color="primary">
 
-    <img slot="secondary" class='logo 'src="assets/imgs/logo.png">
-    
-    <ion-buttons slot="primary">
+    <ion-buttons slot="secondary">   
       <ion-button icon-only (click)="presentPopover($event)">
-      <ion-icon name="more"></ion-icon>
+        <ion-icon name="more"></ion-icon>
       </ion-button>
     </ion-buttons>
 
     <ion-title >
-        Visites des expos de la BML
+      <img class='logo 'src="assets/imgs/logo.png" > Visites des expos de la BML
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -39,7 +37,7 @@
 
 
 
-  <p *ngIf="exposOld.length>0" class='title-principal big-text'>Expositions passées</p>
+  <p *ngIf="exposOld.length>0" class='title-principal big-text'>Expositions passées </p>
 
   <ion-list *ngIf="exposOld.length>0">
       <ion-item *ngFor="let expo of exposOld" href='/expo/{{expo.slug}}' color="bckPageDark" >
