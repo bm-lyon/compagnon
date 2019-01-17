@@ -85,10 +85,11 @@ export class ViewExpoPage implements OnInit {
                   page.image=url;
               });
             }
+            var selfthis=this;
             if(page.mp3){
               storage.ref().child(page.mp3).getDownloadURL().then(function(url){
                 page.mp3=url;
-                this.loadFirstSlide();
+                selfthis.loadFirstSlide();
               });
             }
         });
