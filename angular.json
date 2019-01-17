@@ -20,7 +20,11 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/_redirects",
+              {
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
+              },
               {
                 "glob": "**/*",
                 "input": "src/assets",
@@ -30,6 +34,11 @@
                 "glob": "**/*.svg",
                 "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
+             },
+             { 
+               "glob": "logo.png",
+                "input": "src/assets/imgs",
+              "output": "/img" 
              }
             ],
             "styles": [
