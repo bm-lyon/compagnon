@@ -139,7 +139,7 @@ export class ViewExpoPage implements OnInit {
   loadMp3(){
     this.unload(); 
 
-    if(typeof this.pages[this.currentIndex].mp3!=="undefined"){
+    if(typeof this.pages[this.currentIndex-1].mp3!=="undefined"){
       this.urlMp3=this.pages[this.currentIndex-1].mp3;
       const fichier: MediaObject = this.media.create(this.urlMp3);
       this.file=fichier;
@@ -195,7 +195,7 @@ export class ViewExpoPage implements OnInit {
     if(this.isPlaying==false){
       this.loaderSound=true;
       this.file.play();
-      
+      console.log(this.file);
       this.isPlaying=true;
       this.sound='stop';
       
