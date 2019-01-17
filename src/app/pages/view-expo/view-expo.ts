@@ -88,13 +88,14 @@ export class ViewExpoPage implements OnInit {
             if(page.mp3){
               storage.ref().child(page.mp3).getDownloadURL().then(function(url){
                 page.mp3=url;
+                this.loadFirstSlide();
               });
             }
         });
         
       }).then(()=>{
         //Enleve le loading
-        this.loadFirstSlide();
+        
         this.expoProvider.setCurrentExpo(this.expo);
         loading.dismiss(); 
       });
