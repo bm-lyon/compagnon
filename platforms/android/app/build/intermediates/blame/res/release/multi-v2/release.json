@@ -429,11 +429,9 @@
                 {
                     "source": "/home/fabien/compagnonbml/platforms/android/app/build/generated/res/google-services/release/values/values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,305,387,491,594,714,809",
-                        "endColumns": "143,105,81,103,102,119,94,71",
-                        "endOffsets": "194,300,382,486,589,709,804,876"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
                         "startLines": "109,111,112,113,114,115,116,118",
