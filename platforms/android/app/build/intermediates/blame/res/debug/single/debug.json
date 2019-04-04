@@ -40,12 +40,12 @@
         "source": "/home/fabien/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/28a1b7df3407291242957685f1257c81/res/drawable/notification_bg_low.xml"
     },
     {
-        "merged": "/home/fabien/compagnonbml/platforms/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_icon.png.flat",
-        "source": "/home/fabien/compagnonbml/platforms/android/app/src/main/res/mipmap-hdpi/icon.png"
-    },
-    {
         "merged": "/home/fabien/compagnonbml/platforms/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
         "source": "/home/fabien/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/61deaf8cb4402a70ecd43f4d389fee4f/res/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
+        "merged": "/home/fabien/compagnonbml/platforms/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_icon.png.flat",
+        "source": "/home/fabien/compagnonbml/platforms/android/app/src/main/res/mipmap-hdpi/icon.png"
     },
     {
         "merged": "/home/fabien/compagnonbml/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Apr 04 14:55:41 CEST 2019
+#Thu Apr 04 15:54:21 CEST 2019
 1034.base=/home/fabien/compagnonbml/platforms/android/app/build/intermediates/assets/debug
 881.path=www/svg/ios-basketball.svg
 508.set=ASSET

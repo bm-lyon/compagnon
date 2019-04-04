@@ -5,7 +5,7 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { Media, MediaObject } from '@ionic-native/media/ngx';
+import { Media } from '@ionic-native/media/ngx';
 
 //Les providers
 import { ExposService } from './providers/expos.service';
@@ -16,6 +16,8 @@ import { NotificationsService } from './notifications.service';
 import * as firebase from 'firebase';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+
+import { Firebase } from '@ionic-native/firebase/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -48,6 +50,7 @@ firebase.initializeApp(firebaseConfig);
     Media,
     ExposService,
     NotificationsService,
+    Firebase,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
