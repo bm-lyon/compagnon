@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACf,WAAW,EAAE,QAAQ;EACrB,UAAU,EAAC,KAAK;EAChB,aAAa,EAAC,GAAG;CACpB",
+    "sources": [
+        "infos-expo.page.scss"
+    ],
+    "names": [],
+    "file": "infos-expo.page.css"
+}
