@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "312134308245",
+    "firebase_url": "https://expos-6f76c.firebaseio.com",
+    "project_id": "expos-6f76c",
+    "storage_bucket": "expos-6f76c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:312134308245:android:b6f4a4728fa38c70",
+        "android_client_info": {
+          "package_name": "com.compagnon_expo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "312134308245-3er0v9p999rgv5o2paa60g3sq0bfvae3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ4UB-f1FPrsx8tQQOqIKuGkw7rQb7O_0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
