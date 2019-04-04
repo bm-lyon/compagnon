@@ -73,7 +73,7 @@ module.exports = "<ion-header >\n    <ion-toolbar color=\"primary\">\n        <i
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Fib3V0L2Fib3V0LnBhZ2Uuc2NzcyJ9 */"
+module.exports = ""
 
 /***/ }),
 
@@ -119,4 +119,3 @@ var AboutPage = /** @class */ (function () {
 /***/ })
 
 }]);
-//# sourceMappingURL=pages-about-about-module.js.map

@@ -86,4 +86,3 @@ var _sPassive,GestureController=function(){function t(t){this.doc=t,this.gesture
 /***/ })
 
 }]);
-//# sourceMappingURL=common.js.map

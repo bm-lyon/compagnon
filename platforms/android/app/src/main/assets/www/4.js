@@ -16,4 +16,3 @@ var doc="undefined"==typeof document?{body:{},addEventListener:function(){},remo
 /***/ })
 
 }]);
-//# sourceMappingURL=4.js.map

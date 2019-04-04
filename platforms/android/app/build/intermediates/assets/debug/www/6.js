@@ -15,4 +15,3 @@ function startStatusTap(t,n){t.addEventListener("statusTap",function(){n.read(fu
 /***/ })
 
 }]);
-//# sourceMappingURL=6.js.map

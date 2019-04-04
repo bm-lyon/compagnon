@@ -73,7 +73,7 @@ module.exports = "<ion-header >\n  <ion-toolbar color=\"primary\">\n    <ion-but
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".description-infos {\n  white-space: pre-line;\n  margin-top: 1.5em;\n  margin-bottom: 1em; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2ZhYmllbi9jb21wYWdub25ibWwvc3JjL2FwcC9wYWdlcy9pbmZvcy1leHBvL2luZm9zLWV4cG8ucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0kscUJBQXFCO0VBQ3JCLGlCQUFnQjtFQUNoQixrQkFBaUIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2luZm9zLWV4cG8vaW5mb3MtZXhwby5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZGVzY3JpcHRpb24taW5mb3Mge1xuICAgIHdoaXRlLXNwYWNlOiBwcmUtbGluZTtcbiAgICBtYXJnaW4tdG9wOjEuNWVtO1xuICAgIG1hcmdpbi1ib3R0b206MWVtO1xufVxuIl19 */"
+module.exports = ".description-infos {\n  white-space: pre-line;\n  margin-top: 1.5em;\n  margin-bottom: 1em; }\n"
 
 /***/ }),
 
@@ -124,4 +124,3 @@ var InfosExpoPage = /** @class */ (function () {
 /***/ })
 
 }]);
-//# sourceMappingURL=pages-infos-expo-infos-expo-module.js.map

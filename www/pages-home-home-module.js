@@ -18,7 +18,7 @@ module.exports = "\n  <ion-item>\n      <a routerLink=\"/about\" routerLinkActiv
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "a {\n  text-decoration: none; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2ZhYmllbi9jb21wYWdub25ibWwvc3JjL2FwcC9jb21wb25lbnRzL3BvcG92ZXIvcG9wb3Zlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHFCQUFvQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9wb3BvdmVyL3BvcG92ZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJhe1xuICAgIHRleHQtZGVjb3JhdGlvbjpub25lO1xufSJdfQ== */"
+module.exports = "a {\n  text-decoration: none; }\n"
 
 /***/ }),
 
@@ -134,7 +134,7 @@ var HomePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header >\n  <ion-toolbar color=\"primary\">\n\n    <ion-buttons slot=\"secondary\">   \n      <ion-button icon-only (click)=\"presentPopover($event)\">\n        <ion-icon name=\"more\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n\n    <ion-title >\n      <img class='logo 'src=\"assets/imgs/logo.png\" > Visites des expos de la BML\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content color=\"bckPageLight\">\n  <p class='title-principal big-text '>En ce moment à la BML</p>\n  <ion-row >\n    <ion-col *ngFor=\"let expo of exposNow\">\n      <ion-item  href='/expo/{{expo.slug}}' color=\"none\" lines=\"none\">\n        <ion-card color=\"light\" >\n            <ion-card-content>\n              <img src=\"{{ expo.imageUrl }}\">\n              <ion-card-title class='home-title'>\n                <span class='title-second'>{{ expo.title1 }}</span>\n              </ion-card-title>\n              <p>\n                <span class='title-third' *ngIf=\"expo.title2\">{{ expo.title2 }}</span><br />\n                <span class='home-date'>du {{expo.start | date: \"dd/MM/yyyy\" }} au {{expo.end | date: \"dd/MM/yyyy\" }}<br>{{expo.place}}</span>\n              </p>\n            </ion-card-content>\n        </ion-card>\n      </ion-item>\n      \n    </ion-col>\n  </ion-row>\n\n\n\n  <p *ngIf=\"exposOld.length>0\" class='title-principal big-text'>Expositions passées </p>\n\n  <ion-list *ngIf=\"exposOld.length>0\">\n      <ion-item *ngFor=\"let expo of exposOld\" href='/expo/{{expo.slug}}' color=\"bckPageDark\" >\n        <ion-thumbnail item-start >\n          <img class='fit-thumbnail 'src=\"{{ expo.imageUrl }}\">\n        </ion-thumbnail>\n        <ion-label>\n          <h2 class='title-list'>{{ expo.title1 }}</h2>\n          <p><span class='title-third'>{{ expo.title2 }}</span><br>\n          <span class='home-date'>du {{expo.start | date: \"dd/MM/yyyy\" }} au {{expo.end | date: \"dd/MM/yyyy\" }}</span></p>\n        </ion-label>\n      </ion-item>\n    </ion-list>\n</ion-content>"
+module.exports = "<ion-header >\n  <ion-toolbar color=\"primary\">\n\n    <ion-buttons slot=\"secondary\">   \n      <ion-button icon-only (click)=\"presentPopover($event)\">\n        <ion-icon name=\"more\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n\n    <ion-title >\n      <img class='logo 'src=\"assets/imgs/logo.png\" > Visites des expos de la BML\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content color=\"bckPageLight\">\n  <p class='title-principal big-text ' *ngIf=\"exposNext.length>0\">Prochainement à la BML</p>\n  <ion-row *ngIf=\"exposNext.length>0\">\n    <ion-col *ngFor=\"let expo of exposNext\">\n      <ion-item  color=\"none\" lines=\"none\">\n        <ion-card color=\"light\" >\n            <ion-card-content> \n              <img src=\"{{ expo.imageUrl }}\">\n              <ion-card-title class='home-title'>\n                <span class='title-second'>{{ expo.title1 }}</span>\n              </ion-card-title>\n              <p>\n                <span class='title-third' *ngIf=\"expo.title2\">{{ expo.title2 }}</span><br />\n                <span class='home-date'>du {{expo.start | date: \"dd/MM/yyyy\" }} au {{expo.end | date: \"dd/MM/yyyy\" }}<br>{{expo.place}}</span>\n              </p>\n            </ion-card-content>\n        </ion-card>\n      </ion-item>\n    </ion-col>\n  </ion-row>\n\n\n  <p class='title-principal big-text ' *ngIf=\"exposNow.length>0\">En ce moment à la BML</p>\n  <ion-row *ngIf=\"exposNow.length>0\">\n    <ion-col *ngFor=\"let expo of exposNow\">\n      <ion-item  href='/expo/{{expo.slug}}' color=\"none\" lines=\"none\">\n        <ion-card color=\"light\" >\n            <ion-card-content>\n              <img src=\"{{ expo.imageUrl }}\">\n              <ion-card-title class='home-title'>\n                <span class='title-second'>{{ expo.title1 }}</span>\n              </ion-card-title>\n              <p>\n                <span class='title-third' *ngIf=\"expo.title2\">{{ expo.title2 }}</span><br />\n                <span class='home-date'>du {{expo.start | date: \"dd/MM/yyyy\" }} au {{expo.end | date: \"dd/MM/yyyy\" }}<br>{{expo.place}}</span>\n              </p>\n            </ion-card-content>\n        </ion-card>\n      </ion-item>\n      \n    </ion-col>\n  </ion-row>\n\n\n\n  <p *ngIf=\"exposOld.length>0\" class='title-principal big-text'>Expositions passées </p>\n\n  <ion-list *ngIf=\"exposOld.length>0\">\n      <ion-item *ngFor=\"let expo of exposOld\" href='/expo/{{expo.slug}}' color=\"bckPageDark\" >\n        <ion-thumbnail item-start >\n          <img class='fit-thumbnail 'src=\"{{ expo.imageUrl }}\">\n        </ion-thumbnail>\n        <ion-label>\n          <h2 class='title-list'>{{ expo.title1 }}</h2>\n          <p><span class='title-third'>{{ expo.title2 }}</span><br>\n          <span class='home-date'>du {{expo.start | date: \"dd/MM/yyyy\" }} au {{expo.end | date: \"dd/MM/yyyy\" }}</span></p>\n        </ion-label>\n      </ion-item>\n    </ion-list>\n</ion-content>"
 
 /***/ }),
 
@@ -145,7 +145,7 @@ module.exports = "<ion-header >\n  <ion-toolbar color=\"primary\">\n\n    <ion-b
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "ion-list ion-label {\n  margin-left: 10px; }\n\nion-item {\n  --inner-padding-end:none;\n  --inner-padding-start:none;\n  --padding-start:none;\n  --padding-end:none; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2ZhYmllbi9jb21wYWdub25ibWwvc3JjL2FwcC9wYWdlcy9ob21lL2hvbWUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRVEsaUJBQWdCLEVBQUE7O0FBSXhCO0VBQ0ksd0JBQW9CO0VBQ3BCLDBCQUFzQjtFQUN0QixvQkFBZ0I7RUFDaEIsa0JBQWMsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2hvbWUvaG9tZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tbGlzdHtcbiAgICBpb24tbGFiZWx7XG4gICAgICAgIG1hcmdpbi1sZWZ0OjEwcHg7XG4gICAgfVxufVxuIFxuaW9uLWl0ZW17XG4gICAgLS1pbm5lci1wYWRkaW5nLWVuZDpub25lO1xuICAgIC0taW5uZXItcGFkZGluZy1zdGFydDpub25lO1xuICAgIC0tcGFkZGluZy1zdGFydDpub25lO1xuICAgIC0tcGFkZGluZy1lbmQ6bm9uZTtcbiAgICBcbn1cblxuIl19 */"
+module.exports = "ion-list ion-label {\n  margin-left: 10px; }\n\nion-item {\n  --inner-padding-end:none;\n  --inner-padding-start:none;\n  --padding-start:none;\n  --padding-end:none; }\n\nion-card-title {\n  margin-top: 1em; }\n"
 
 /***/ }),
 
@@ -228,6 +228,7 @@ var HomePage = /** @class */ (function () {
         this.expos = new rxjs__WEBPACK_IMPORTED_MODULE_4__["Observable"]();
         this.exposNow = new Array();
         this.exposOld = new Array();
+        this.exposNext = new Array();
     }
     HomePage.prototype.ionViewDidLoad = function () {
     };
@@ -277,6 +278,9 @@ var HomePage = /** @class */ (function () {
                                     if (new Date(expo.end) < currentDate) {
                                         _this.exposOld.push(expo);
                                     }
+                                    else if (new Date(expo.start) > currentDate) {
+                                        _this.exposNext.push(expo);
+                                    }
                                     else {
                                         _this.exposNow.push(expo);
                                     }
@@ -288,6 +292,7 @@ var HomePage = /** @class */ (function () {
                                 _loop_1(expo);
                             }
                             _this.exposOld.reverse();
+                            _this.exposNext.reverse();
                             _this.exposNow.reverse();
                             loading.dismiss();
                         });
@@ -318,4 +323,3 @@ var HomePage = /** @class */ (function () {
 /***/ })
 
 }]);
-//# sourceMappingURL=pages-home-home-module.js.map
