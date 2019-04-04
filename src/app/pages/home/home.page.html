@@ -13,9 +13,31 @@
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content color="bckPageLight">
-  <p class='title-principal big-text '>En ce moment à la BML</p>
-  <ion-row >
+  <p class='title-principal big-text ' *ngIf="exposNext.length>0">Prochainement à la BML</p>
+  <ion-row *ngIf="exposNext.length>0">
+    <ion-col *ngFor="let expo of exposNext">
+      <ion-item  color="none" lines="none">
+        <ion-card color="light" >
+            <ion-card-content> 
+              <img src="{{ expo.imageUrl }}">
+              <ion-card-title class='home-title'>
+                <span class='title-second'>{{ expo.title1 }}</span>
+              </ion-card-title>
+              <p>
+                <span class='title-third' *ngIf="expo.title2">{{ expo.title2 }}</span><br />
+                <span class='home-date'>du {{expo.start | date: "dd/MM/yyyy" }} au {{expo.end | date: "dd/MM/yyyy" }}<br>{{expo.place}}</span>
+              </p>
+            </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+
+  <p class='title-principal big-text ' *ngIf="exposNow.length>0">En ce moment à la BML</p>
+  <ion-row *ngIf="exposNow.length>0">
     <ion-col *ngFor="let expo of exposNow">
       <ion-item  href='/expo/{{expo.slug}}' color="none" lines="none">
         <ion-card color="light" >

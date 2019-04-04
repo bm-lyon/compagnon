@@ -17,6 +17,7 @@ export class HomePage implements OnInit {
   expos = new Observable<any>();
   exposNow = new Array<any>();
   exposOld = new Array<any>();
+  exposNext = new Array<any>();
 
   constructor(    
       private popoverController: PopoverController,
@@ -65,6 +66,8 @@ export class HomePage implements OnInit {
     
               if(new Date(expo.end) < currentDate){
                 this.exposOld.push(expo);
+              }else if(new Date(expo.start) > currentDate){
+                this.exposNext.push(expo);
               }else{
                 this.exposNow.push(expo);
               }
@@ -72,6 +75,7 @@ export class HomePage implements OnInit {
 
           }
           this.exposOld.reverse();
+          this.exposNext.reverse();
           this.exposNow.reverse();
           loading.dismiss();
         });
